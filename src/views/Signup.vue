@@ -8,8 +8,9 @@
             style="height: 100%;"
         >
             <v-col
-                cols="3"                
+                lg="3"
                 md="4"
+                sm="10"
             >
                 <v-card>
                     <v-card-title>Регистрация</v-card-title>
