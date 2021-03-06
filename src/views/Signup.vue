@@ -103,7 +103,7 @@ export default {
             const isFullName = this.fio.lastname && this.fio.firstname && this.fio.secondname;
             const isPasswordRight = this.password && this.passwordRepeated && this.password == this.passwordRepeated;
 
-            return this.valid && this.email && isFullName && isPasswordRight;
+            return this.valid && this.acceptingRules && this.email && isFullName && isPasswordRight;
         }
     },
     data() {
