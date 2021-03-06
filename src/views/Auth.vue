@@ -9,6 +9,7 @@
         >
             <v-col
                 cols="3"
+                md="4"
             >
                 <v-card>
                     <v-card-title>Вход</v-card-title>
