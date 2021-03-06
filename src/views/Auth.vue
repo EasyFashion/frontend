@@ -8,7 +8,7 @@
             style="height: 100%;"
         >
             <v-col
-                lg="3"
+                xl="3"
                 md="4"
                 sm="10"
             >
