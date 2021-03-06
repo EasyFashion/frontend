@@ -9,9 +9,7 @@
             @changeDrawer="changeDrawer"
         />        
 
-        <v-main
-            class="pa-10"
-        >
+        <v-main>
             <router-view></router-view>
         </v-main>
 
