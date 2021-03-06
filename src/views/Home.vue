@@ -16,6 +16,7 @@
         </v-row>        
         <v-row 
             dense
+            class="pb-10"
         >
             <v-col
                 v-for="(card, index) in cards"

@@ -12,7 +12,6 @@
         
         <v-btn 
             plain
-            outlined
             to="/auth"
         >
             Войти
