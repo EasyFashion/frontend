@@ -9,7 +9,7 @@
             dense
         >
             <v-list-item-group
-                active-class="deep-purple--text text--accent-4"
+                active-class="grey--text text--accent-4"
             >
                 <v-list-item to="/">
                     <v-list-item-icon>
