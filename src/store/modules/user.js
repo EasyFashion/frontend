@@ -1,3 +1,5 @@
+import { httpClient } from "../../utils/rest"
+
 export default {
     state: {
         id: "",

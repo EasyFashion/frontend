@@ -21,7 +21,19 @@ const routes = [
         name: 'Authentication',
         component: () => import('../views/Auth.vue'),
         meta: { title: 'Войти' }
-    }
+    },
+    {
+        path: '/request',
+        name: 'Request',
+        component: () => import('../views/Request.vue'),
+        meta: { title: 'Оформить заявку на пошив' }
+    },
+    {
+        path: '/request-list',
+        name: 'RequestList',
+        component: () => import('../views/RequestList.vue'),
+        meta: { title: 'Список заявок на пошив' }
+    },
 ]
 
 const router = new VueRouter({

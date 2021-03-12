@@ -38,6 +38,11 @@ export default {
         changeDrawer(value) {
             this.drawer = value;
         }
+    },
+    created() {
+        if (this.$store.getters.isAuthenticated) {
+            this.$store.dispatch('loadProfile');
+        }
     }
 };
 </script>

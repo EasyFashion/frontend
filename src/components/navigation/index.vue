@@ -51,7 +51,13 @@
                 <v-divider></v-divider>
 
                 <v-list>
-                    <v-list-item>
+                    <v-list-item
+                        v-for="(item, i) in menus"
+                        :key="i"
+                        link
+                        :to="item.path"
+                    >
+                        <v-list-item-title>{{ item.title }}</v-list-item-title>
                     </v-list-item>
                 </v-list>
 
@@ -76,7 +82,18 @@ import { mapGetters } from 'vuex';
 export default {
     data() {
         return {
-            menu: false      
+            menu: false,
+            
+            menus: [
+                {
+                    title: 'Оформить заявку',
+                    path: '/request'
+                },
+                {
+                    title: 'Каталог заявок',
+                    path: '/request-list'
+                }
+            ]
         }
     },
     computed: mapGetters(['user', 'isAuthenticated']),

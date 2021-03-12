@@ -1,3 +1,5 @@
+import { httpClient } from "../../utils/rest"
+
 export default {
     state: {
         token: localStorage.getItem("user-token") ?? ""        
@@ -16,10 +18,12 @@ export default {
         }
     },
     actions: {
-        signup({ dispatch, commit}) {
+        async signup({ dispatch, commit}) {
 
         },
-        login({ dispatch, commit}, user) {
+        async login({ dispatch, commit}, user) {
+            const data = await httpClient.get("/");
+            console.log(data);
             const token = "lol";
             localStorage.setItem("user-token", token);                        
             commit("login", token);
