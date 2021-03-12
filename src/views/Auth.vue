@@ -87,7 +87,9 @@ export default {
     },
     methods: {
         login() {
-
+            const { email, password } = this;
+            this.$store.dispatch('login', { email, password });
+            this.$router.push('/');
         },        
     }
 }

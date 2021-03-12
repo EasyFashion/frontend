@@ -19,7 +19,7 @@ export default {
         signup({ dispatch, commit}) {
 
         },
-        login({ dispatch, commit}) {
+        login({ dispatch, commit}, user) {
             const token = "lol";
             localStorage.setItem("user-token", token);                        
             commit("login", token);

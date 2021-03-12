@@ -9,6 +9,29 @@ export default {
     getters: {
         isProfileLoaded(state) {
             return !!state.id;
+        },
+        user(state, getters) {
+            return {
+                ...state,
+                ...getters.icon,
+                ...getters.fio,
+                ...getters.role
+            };
+        },
+        fio(state) {
+            return {
+                fio: state.lastname + ' ' + state.name
+            }
+        },
+        icon(state) {
+            return {
+                icon: state.isManufacturer ? 'mdi-domain' : 'mdi-account'
+            }
+        },
+        role(state) {
+            return {
+                role: state.isManufacturer ? 'Производитель' : 'Пользователь'
+            }
         }
     },
     mutations: {
