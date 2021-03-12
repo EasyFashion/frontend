@@ -43,7 +43,7 @@
                             <v-btn
                                 :disabled="!accessToLogin"
                                 color="success"
-                                @click="validate"
+                                @click="login"
                             >
                             Войти
                             </v-btn>
@@ -86,7 +86,7 @@ export default {
         }
     },
     methods: {
-        validate() {
+        login() {
 
         },        
     }
