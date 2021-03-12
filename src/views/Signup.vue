@@ -12,7 +12,9 @@
                 md="4"
                 sm="10"
             >
-                <v-card>
+                <v-card
+                    @keyup.enter="signup"
+                >
                     <v-card-title>Регистрация</v-card-title>
 
                     <v-form
@@ -140,6 +142,10 @@ export default {
     },
     methods: {
         signup() {
+            if (!this.accesToSignup) {
+                this.$refs.form.validate();
+                return;
+            }
 
         }
     }

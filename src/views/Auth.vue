@@ -12,7 +12,9 @@
                 md="4"
                 sm="10"
             >
-                <v-card>
+                <v-card        
+                    @keyup.enter="login"
+                >
                     <v-card-title>Вход</v-card-title>
 
                     <v-form
@@ -87,6 +89,11 @@ export default {
     },
     methods: {
         login() {
+            if (!this.accessToLogin) {
+                this.$refs.form.validate();
+                return;
+            }
+
             const { email, password } = this;
             this.$store.dispatch('login', { email, password });
             this.$router.push('/');
