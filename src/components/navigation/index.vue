@@ -76,14 +76,7 @@ import { mapGetters } from 'vuex';
 export default {
     data() {
         return {
-            menu: false,
-
-            menuItems: [
-                {
-                    title: '',
-                    path: ''
-                }
-            ]          
+            menu: false      
         }
     },
     computed: mapGetters(['user', 'isAuthenticated']),
